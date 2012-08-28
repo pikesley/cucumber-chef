@@ -165,7 +165,7 @@ Broadcast: 192.168.255.255
 
 <ul>
 <li>Sets up a server called <code>devopserver</code>.</li>
-<li>Makes the server persistant (it will remain up after the test finishes, which is the default behaviour).</li>
+<li>Makes the server persistent (it will remain up after the test finishes, which is the default behaviour).</li>
 <li>Assigns it an IP address on the test lab network (this can be omitted for an auto-assigned IP).</li>
 <li>Tells Cucumber-Chef to provision the server.</li>
 <li>Adds the <code>chef-client::service</code> recipe in to the chef-client's run list.</li>
@@ -175,7 +175,7 @@ Broadcast: 192.168.255.255
 
 <pre><code>  Background:
     * I have a server called devopserver
-    * devopserver is persistant
+    * devopserver is persistent
     * devopserver has an IP address of 192.168.10.10
     * devopserver has been provisioned
     * the chef-client::service recipe has been added to the devopserver run list
@@ -225,7 +225,7 @@ Broadcast: 192.168.255.255
 
 <p>Set a (server) to persist or not:</p>
 
-<pre><code>(server) is (persistant|non-persistant)
+<pre><code>(server) is (persistent|non-persistent)
 </code></pre>
 
 <p>Assign (server) a specific IP address (must be on the test lab network segment):</p>
@@ -480,7 +480,7 @@ Feature: Do test driven infrastructure with Cucumber-Chef
 
   Background:
     * I have a server called devopserver
-    * devopserver is persistant
+    * devopserver is persistent
     * devopserver has an IP address of 192.168.10.10
     * devopserver has been provisioned
     * the chef-client::service recipe has been added to the devopserver run list
@@ -551,7 +551,7 @@ Feature: Do test driven infrastructure with Cucumber-Chef
   Background:                                                                    # /home/ubuntu/features/devopserver.feature:7
     * all servers are being destroyed
     * I have a server called devopserver                                         # cucumber-chef-2.0.0.rc1/lib/cucumber/chef/steps/provision_steps.rb:1
-    * devopserver is persistant                                                  # cucumber-chef-2.0.0.rc1/lib/cucumber/chef/steps/provision_steps.rb:5
+    * devopserver is persistent                                                  # cucumber-chef-2.0.0.rc1/lib/cucumber/chef/steps/provision_steps.rb:5
     * devopserver has an IP address of 192.168.10.10                             # cucumber-chef-2.0.0.rc1/lib/cucumber/chef/steps/provision_steps.rb:9
     * devopserver is being provisioned
     * devopserver has been provisioned                                           # cucumber-chef-2.0.0.rc1/lib/cucumber/chef/steps/provision_steps.rb:17
